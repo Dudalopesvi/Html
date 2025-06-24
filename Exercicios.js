@@ -1,148 +1,118 @@
 /*
+////////////////////////////////////////////////////////////////
+  _      ______ _____                     ____  _    _ _____ 
+ | |    |  ____|_   _|   /\         /\   / __ \| |  | |_   _|
+ | |    | |__    | |    /  \       /  \ | |  | | |  | | | |  
+ | |    |  __|   | |   / /\ \     / /\ \| |  | | |  | | | |  
+ | |____| |____ _| |_ / ____ \   / ____ \ |__| | |__| |_| |_ 
+ |______|______|_____/_/    \_\ /_/    \_\___\_\\____/|_____|
+                                                             
+ ////////////////////////////////////////////////////////////////
+
 INSTRUÇÕES PARA AS ATIVIDADES
+
+Ao pedir números vindo de um prompt, utilize Number() antes, e insira o prompt dentro dos parênteses. Por Exemplo:
+
+exemplo = Number(prompt("Digite um número como exemplo:"))
+
 Rode um código por vez. Quando testar e estiver tudo certo,
 comente o código igual essas questões, utilizando /* e */
 
+
+
+
 /*
-1. A Porta do Guardião
-Contexto: O guardião pergunta sua idade antes de entrar no castelo.
+1. Classificação Etária
+Contexto: Um cartógrafo precisa classificar uma pessoa por faixa etária.
 
-Se você tiver menos de 12 anos, ele diz “Entrada infantil”.
+Instrução: Solicite ao usuário a idade e informe a faixa etária correspondente.
 
+Saídas Possíveis:
+  "Você é uma criança."
+  "Você é um adolescente."
+  "Você é um adulto."
+  "Você é um idoso."
 
-Entre 12 e 17, diz “Entrada jovem”.
-
-Se for 18 ou mais, “Entrada adulto”.
+EXIBA NO CONSOLE COM console.log
 */
-//Escreva seu código abaixo
 console.log("\n Exercício 1 \n")
-// declaração de variavel 
- let idade = prompt("digite sua idade: ")
+//Escreva seu código abaixo
 
- // se voce tiver menos de 12 anos, ele diz "entrada infantil"
- if(idade <12){
-    alert("entrada infantil")
- }
-//entre 12 e 17, diz "entrada jovem"
-else if(idade <= 17){
-    alert("entrada jovem")
+let idade = Number (prompt("digite sua idade"))
+if (idade <=11) {
+ alert ("Você é uma criança.")
 }
-// se for 18 ou mais, "entrada adulto"
+
+else if (idade <=17){
+ alert("Você é um adolescente.")
+  
+}
+ else if (idade<=59){
+ alert ("Você é um adulto.")
+ 
+ } 
 else {
-    alert("entrada adulto")
-}
+alert ("Você é um idoso.")
+ } 
+
+
+
 
 
 /*
-2. A Escadaria Infinita (enquanto)
-Contexto: Para subir até a torre do mapa, você sobe um degrau por vez.
+2. Cálculo de Média
+Contexto: Um usuário precisa calcular a média de três notas.
 
-Use while para imprimir: “Subindo... 1”, “Subindo... 2” ... até 10.
+Instrução: Solicite ao usuário três notas e calcule a média.
+
+EXIBA NO CONSOLE COM console.log
+
 */
-
 console.log("\n Exercício 2 \n")
 //Escreva seu código abaixo
-let totaldegraus
-let contador = 1
+let media
 
-totaldegraus = prompt ("Quantos Degraus tem?")
-
-while (contador <= totaldegraus ){
-    alert("Subindo..." + contador)
-    contador = contador + 1
-}
+let nota1= Number (prompt("digite sua nota 1: "))
+let nota2=Number (prompt("digite sua nota 2: "))
+let nota3=Number (prompt("Digite sua nota 3:"))
+alert (" Sua média é " + ((nota1+nota2+nota3)/3 ))
  
 
-
-
-
-
-
-
 /*
-3. O Oráculo dos Números (positivo, negativo, zero)
-Contexto: O Oráculo vê um número e precisa saber se é positivo, negativo ou zero.
+3. Soma de Números
+Contexto: Um enigma requer a soma de uma sequência de números.
 
-Peça um número e mostre a categoria usando condicionais.
+Instrução: Solicite ao usuário um número `n` e calcule a soma de todos os números de 1 até `n`.
+
+EXIBA NO CONSOLE COM console.log
+
 */
-
 console.log("\n Exercício 3 \n")
-
-let num1 = prompt("digite seu numero")
-if(num1 > 0){
-    alert("numero positivo")
-}
-else if(num1 < 0){
-    alert("numero negativo")
-}
-else {
-    alert("numero igual a zero")
-}
-
-/*
- 
-
-
-
-
-/*
-4. O Cofre Secreto (senha simples)
-Contexto: Há um cofre que abre com senha.
-
-Peça uma senha. Se for "1234", exiba “Cofre aberto”.
-
-Caso contrário, “Senha incorreta”.
-*/
 //Escreva seu código abaixo
+
+
+
+
+/*
+4. Tabuada
+Contexto: Um usuário precisa calcular a tabuada de um número.
+
+Instrução: Solicite ao usuário um número e exiba a tabuada desse número de 1 até ele mesmo.
+
+Exemplo: Se o número que o usuário informou foi 5:
+
+EXIBA ASSIM NO CONSOLE COM console.log
+
+Tabuada de 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+
+*/
 console.log("\n Exercício 4 \n")
-let senha = prompt("digite sua senha")
-if (senha==1234){
-    alert("cofre aberto")
-}
-else {
-   alert("senha incorreta")
-}
-
-
-
-/*
-5. O Cofre Teimoso (senha com loop)
-Contexto: O cofre só abre quando a senha certa for digitada.
-
-Use while para pedir senha até o usuário acertar "1234".
-
-Ao acertar, escreva “Acesso concedido”.
-*/
 //Escreva seu código abaixo
-console.log("\n Exercício 5 \n")
-let indentificação = "1234"
-let tentativa = prompt ("Digite sua senha: ")
-
-while(tentativa != 1234 ){
-    prompt("digite sua senha :")
-    alert ("senha incorreta, tente novamente ")
-}
-tentativa = indentificação
-alert ("cofre aberto")
-
-/*
-6. A Torre dos Degraus (soma com while)
-Contexto: Precisamos saber quantos degraus você subiu até uma certa altura.
-
-Pergunte ao usuário quantos degraus quer subir (n).
-
-Use while, some de 1 até n e exiba a soma total de degraus subidos.
-*/
-//Escreva seu código abaixo
-console.log("\n Exercício 6 \n")
-
-
-
-/*
-7. Os Pergaminhos da Sabedoria (for com soma)
-Contexto: Um sábio te pede para contar quantos pergaminhos existem de 1 até n.
-
-Peça n e use for para contar de 1 a n e exibir “Total de x pergaminhos”.
-*/
-//Escreva seu código abaixo
-console.log("\n Exercício 7 \n")
+let tabuada = Number (prompt("Digite sua multiplicação:"))
+let contador=i
+alert("sua multiplicação é:" + (1*<i) )
