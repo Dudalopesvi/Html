@@ -88,8 +88,12 @@ EXIBA NO CONSOLE COM console.log
 
 */
 console.log("\n Exercício 3 \n")
-//Escreva seu código abaixo
-
+let contador= Number (prompt("Digite o valor:")) 
+let soma = 0
+for (let i = 1; i <= contador; i++) {
+  soma = soma + i
+}
+alert("o valor da sua soma é: " + (soma)  )
 
 
 
@@ -113,7 +117,5 @@ Tabuada de 5
 */
 console.log("\n Exercício 4 \n")
 let numero= Number (prompt("Digite o número para exibir sua tabuada:")) 
-
-for (let index = 1; index <= numero; index++) {
-  
-}
+for (let index = 1; index <= numero; index++) 
+alert("o valor da sua multiplicação é: " + (index*numero))
