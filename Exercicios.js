@@ -112,7 +112,8 @@ Tabuada de 5
 
 */
 console.log("\n Exercício 4 \n")
-//Escreva seu código abaixo
-let tabuada = Number (prompt("Digite sua multiplicação:"))
-let contador=i
-alert("sua multiplicação é:" + (1*<i) )
+let numero= Number (prompt("Digite o número para exibir sua tabuada:")) 
+
+for (let index = 1; index <= numero; index++) {
+  
+}
