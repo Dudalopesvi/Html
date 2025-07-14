@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ot-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de alunos</title>
+</head>
+<body  style="text-align: center; font-family:sans   ">
+   
+     <input type="text"  id = "alunos" >
+ <button onclick="adicionaralunos()">adicionar alunos</button>
+ <button onclick="removeraluno()">remover aluno</button>
+ <button onclick="visualizaralunos()">vizualizar alunos</button>
+   <h2>Lista de alunos </h2>
+    <ul id="lista-alunos"></ul>
+
+
+ <script>
+    let alunos = []
+    
+
+
+
+
+
+
+function adicionaralunos() {
+       const input = document.getElementById("alunos");
+      
+  if (input.value !=="") {
+     alunos.push(input.value);
+     atualizarlista();
+    input.value = ""; }
+
+}
+
+function  atualizarlista() {
+      const ul = document.getElementById("lista-alunos");
+    ul.innerHTML="";
+    for (let i = 0; i < alunos.length; i++) {
+        const li = document.createElement("li")
+        li.textContent = alunos[i]
+       ul.appendChild(li);
+}
+
+}
+
+
+function removeraluno() {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

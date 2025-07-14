@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  style="text-align: center; font-family:sans   ">
+<h2>Adicione a imagem que voce quiser </h2>
+   
+  <input type="text" id = "link" placeholder="URL da imagem">
+  <button onclick="adicionarimagem()">adicionar</button>
+  <button onclick="limpar()">limpar</button>
+  <div id = "galeria"  style="margin-top: 20px;"></div>
+  
+  <script>
+    let imagens = []
+
+function adicionarimagem() {
+    const input = document.getElementById("link");
+  if (input.value !=="") {
+     imagens.push(input.value);
+    atualizargaleria();
+    input.value = ""; }
+else {
+    alert("adicione uma URL válida")
+}
+}
+
+function atualizargaleria() {
+    const galeria = document.getElementById("galeria");
+    galeria.innerHTML="";
+    for (let i = 0; i < imagens.length; i++) {
+      
+galeria.innerHTML += `<img src="${imagens [i]}" width ="150"  style="margin:10px; border - radius: 10px">`
+
+    }
+}
+
+
+function limpar(){
+    imagens = [];
+        atualizargaleria();
+    
+}
+</script>
+</body>
+</html>
